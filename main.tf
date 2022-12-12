@@ -31,7 +31,8 @@ resource "github_repository_file" "default_codeowners" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -107,7 +108,8 @@ EOF
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -124,7 +126,8 @@ resource "github_repository_file" "tf_codeowners" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -141,7 +144,8 @@ resource "github_repository_file" "tf_main" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -158,7 +162,8 @@ resource "github_repository_file" "tf_local" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -175,7 +180,8 @@ resource "github_repository_file" "tf_versions" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -192,7 +198,8 @@ resource "github_repository_file" "tf_outputs" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -209,7 +216,8 @@ resource "github_repository_file" "tf_data" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -226,7 +234,8 @@ resource "github_repository_file" "tf_variables" {
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -287,7 +296,8 @@ EOF
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -355,7 +365,8 @@ EOF
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -407,7 +418,8 @@ EOF
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
@@ -444,7 +456,8 @@ EOF
   lifecycle {
     ignore_changes = [
       commit_author,
-      commit_email
+      commit_email,
+      content
     ]
   }
 }
