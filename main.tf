@@ -28,6 +28,12 @@ resource "github_repository_file" "default_codeowners" {
   content             = each.value.code_owners
   commit_message      = "Initial code owners commit"
   overwrite_on_create = false
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_branch_protection" "default_branch_protection" {
@@ -35,7 +41,7 @@ resource "github_branch_protection" "default_branch_protection" {
   repository_id = github_repository.default_repositories[(each.key)].node_id
 
   pattern          = "main"
-  enforce_admins   = true
+  enforce_admins   = each.value.enforce_admins
   allows_deletions = true
 
   required_status_checks {
@@ -97,6 +103,13 @@ terraform.rc
 EOF
   commit_message      = "Initial gitignore commit"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_codeowners" {
@@ -107,6 +120,13 @@ resource "github_repository_file" "tf_codeowners" {
   content             = each.value.code_owners
   commit_message      = "Initial code owners commit"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_main" {
@@ -117,6 +137,13 @@ resource "github_repository_file" "tf_main" {
   content             = ""
   commit_message      = "Initial main.tf"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_local" {
@@ -127,6 +154,13 @@ resource "github_repository_file" "tf_local" {
   content             = ""
   commit_message      = "Initial local.tf"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_versions" {
@@ -137,6 +171,13 @@ resource "github_repository_file" "tf_versions" {
   content             = ""
   commit_message      = "Initial versions.tf"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_outputs" {
@@ -147,6 +188,13 @@ resource "github_repository_file" "tf_outputs" {
   content             = ""
   commit_message      = "Initial outputs.tf"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_data" {
@@ -157,6 +205,13 @@ resource "github_repository_file" "tf_data" {
   content             = ""
   commit_message      = "Initial data.tf"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_variables" {
@@ -167,6 +222,13 @@ resource "github_repository_file" "tf_variables" {
   content             = ""
   commit_message      = "Initial variables.tf"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_pre_commit" {
@@ -221,6 +283,13 @@ repos:
 EOF
   commit_message      = "Initial pre-commit"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_pre_commit_workflow" {
@@ -282,6 +351,13 @@ jobs:
 EOF
   commit_message      = "Initial pre-commit workflow"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_release_workflow" {
@@ -327,6 +403,13 @@ jobs:
 EOF
   commit_message      = "Initial release workflow"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "tf_docs_workflow" {
@@ -357,6 +440,13 @@ jobs:
 EOF
   commit_message      = "Initial release workflow"
   overwrite_on_create = false
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_branch_protection" "tf_branch_protection" {
