@@ -454,7 +454,7 @@ resource "github_branch_protection" "tf_branch_protection" {
   repository_id = github_repository.tf_repositories[(each.key)].node_id
 
   pattern          = "main"
-  enforce_admins   = true
+  enforce_admins   = each.value.enforce_admins
   allows_deletions = true
 
   required_status_checks {
