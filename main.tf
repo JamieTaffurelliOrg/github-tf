@@ -478,6 +478,7 @@ resource "github_branch_protection" "tf_branch_protection" {
     dismiss_stale_reviews = true
     restrict_dismissals   = false
   }
+
   depends_on = [
     github_repository_file.tf_gitignore,
     github_repository_file.tf_codeowners,
