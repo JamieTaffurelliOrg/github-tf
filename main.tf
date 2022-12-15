@@ -320,7 +320,6 @@ env:
   TERRAFORM_VERSION: "1.3.3"
 jobs:
   pre-commit:
-    environment: deploy
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
