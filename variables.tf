@@ -22,9 +22,6 @@ variable "default_repositories" {
       code_owners                             = string
       enforce_admins                          = optional(bool, true)
       allows_deletions                        = optional(bool, false)
-      advanced_security                       = optional(string, "enabled")
-      secret_scanning                         = optional(string, "enabled")
-      secret_scanning_push_protection         = optional(string, "enabled")
     }
   ))
   description = "Blank (non-templated#) repositories to create"
@@ -54,9 +51,6 @@ variable "tf_repositories" {
       code_owners                             = string
       enforce_admins                          = optional(bool, true)
       allows_deletions                        = optional(bool, false)
-      advanced_security                       = optional(string, "enabled")
-      secret_scanning                         = optional(string, "enabled")
-      secret_scanning_push_protection         = optional(string, "enabled")
     }
   ))
   description = "The repositories to be created that host Terraform modules"
