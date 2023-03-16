@@ -18,6 +18,20 @@ resource "github_repository" "default_repositories" {
   archive_on_destroy                      = each.value.archive_on_destroy
   vulnerability_alerts                    = each.value.vulnerability_alerts
   ignore_vulnerability_alerts_during_read = each.value.ignore_vulnerability_alerts_during_read
+
+  security_and_analysis {
+    advanced_security {
+      status = "enabled"
+    }
+
+    secret_scanning {
+      status = "enabled"
+    }
+
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
 }
 
 resource "github_repository_file" "default_codeowners" {
@@ -78,6 +92,20 @@ resource "github_repository" "tf_repositories" {
   archive_on_destroy                      = each.value.archive_on_destroy
   vulnerability_alerts                    = each.value.vulnerability_alerts
   ignore_vulnerability_alerts_during_read = each.value.ignore_vulnerability_alerts_during_read
+
+  security_and_analysis {
+    advanced_security {
+      status = "enabled"
+    }
+
+    secret_scanning {
+      status = "enabled"
+    }
+
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
+  }
 }
 
 resource "github_repository_file" "tf_gitignore" {
