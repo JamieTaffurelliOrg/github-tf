@@ -316,6 +316,7 @@ repos:
           - --args=--verbose
           - --args=--non-recursive
       - id: terraform_tfsec
+      - id: terraform_checkov
 
 EOF
   commit_message      = "Initial pre-commit"
