@@ -1,4 +1,5 @@
 resource "github_repository" "default_repositories" {
+  #checkov:skip=CKV_GIT_1:WE will be using public repos
   for_each                                = { for repo in var.default_repositories : repo.name => repo }
   name                                    = each.key
   visibility                              = each.value.visibility
@@ -52,6 +53,8 @@ resource "github_repository_file" "default_codeowners" {
 }
 
 resource "github_branch_protection" "default_branch_protection" {
+  #checkov:skip=CKV_GIT_6:Signed commits coming later
+  #checkov:skip=CKV_GIT_5:I am one person
   for_each      = { for repo in var.default_repositories : repo.name => repo }
   repository_id = github_repository.default_repositories[(each.key)].node_id
 
@@ -73,6 +76,7 @@ resource "github_branch_protection" "default_branch_protection" {
 }
 
 resource "github_repository" "tf_repositories" {
+  #checkov:skip=CKV_GIT_1:We will be using public repos
   for_each                                = { for repo in var.tf_repositories : repo.name => repo }
   name                                    = each.key
   visibility                              = each.value.visibility
@@ -316,6 +320,7 @@ repos:
           - --args=--verbose
           - --args=--non-recursive
       - id: terraform_tfsec
+      - id: terraform_checkov
 
 EOF
   commit_message      = "Initial pre-commit"
@@ -339,6 +344,8 @@ resource "github_repository_file" "tf_pre_commit_workflow" {
 on: pull_request
 
 concurrency: ci-$${{ github.workflow }}-$${{ github.ref }}
+
+permissions: read-all
 
 env:
   ARM_CLIENT_ID: $${{ secrets.AZURE_CLIENT_ID }}
@@ -380,6 +387,7 @@ jobs:
         tar -xf terrascan.tar.gz terrascan && rm terrascan.tar.gz
         install terrascan /usr/local/bin && rm terrascan
         go install github.com/aquasecurity/tfsec/cmd/tfsec@latest
+        pip install checkov
 
     - name: Run pre-commit
       uses: pre-commit/action@v3.0.0
@@ -410,6 +418,8 @@ on:
       - main
 
 concurrency: ci-$${{ github.workflow }}-$${{ github.ref }}
+
+permissions: read-all
 
 jobs:
   release:
@@ -461,6 +471,8 @@ on: pull_request
 
 concurrency: ci-$${{ github.workflow }}-$${{ github.ref }}
 
+permissions: read-all
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -490,6 +502,8 @@ EOF
 }
 
 resource "github_branch_protection" "tf_branch_protection" {
+  #checkov:skip=CKV_GIT_6:Signed commits coming later
+  #checkov:skip=CKV_GIT_5:I am one person
   for_each      = { for repo in var.tf_repositories : repo.name => repo }
   repository_id = github_repository.tf_repositories[(each.key)].node_id
 
