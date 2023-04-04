@@ -5,6 +5,8 @@ on:
 
 concurrency: ci-${{ github.workflow }}-${{ github.ref }}
 
+permissions: read-all
+
 jobs:
   release:
     environment: deploy
