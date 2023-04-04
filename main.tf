@@ -424,7 +424,6 @@ permissions:
   checks: read
   contents: write
   deployments: read
-  id-token: read
   issues: read
   discussions: read
   packages: read
