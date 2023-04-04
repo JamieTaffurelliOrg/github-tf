@@ -419,7 +419,20 @@ on:
 
 concurrency: ci-$${{ github.workflow }}-$${{ github.ref }}
 
-permissions: read-all
+permissions:
+  actions: read
+  checks: read
+  contents: write
+  deployments: read
+  id-token: read
+  issues: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: read
+  repository-projects: read
+  security-events: read
+  statuses: read
 
 jobs:
   release:
