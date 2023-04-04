@@ -39,5 +39,5 @@ repos:
   #      args:
   #        - --args=--verbose
   #        - --args=--non-recursive
-  #    - id: terraform_tfsec
-       - id: terraform_checkov
+      - id: terraform_tfsec
+      - id: terraform_checkov
