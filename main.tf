@@ -280,7 +280,7 @@ resource "github_repository_file" "tf_pre_commit" {
   content             = <<EOF
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.4.0
     hooks:
       - id: check-added-large-files
       - id: check-merge-conflict
@@ -313,7 +313,7 @@ repos:
       - id: shellcheck
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.72.1
+    rev: v1.81.0
     hooks:
       - id: terrascan
         args:
