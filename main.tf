@@ -531,17 +531,19 @@ resource "github_branch_protection" "tf_branch_protection" {
   for_each      = { for repo in var.tf_repositories : repo.name => repo }
   repository_id = github_repository.tf_repositories[(each.key)].node_id
 
-  pattern          = "main"
-  enforce_admins   = each.value.enforce_admins
-  allows_deletions = true
+  pattern                 = "main"
+  enforce_admins          = each.value.enforce_admins
+  allows_deletions        = true
+  required_linear_history = true
 
   required_status_checks {
     strict = true
   }
 
   required_pull_request_reviews {
-    dismiss_stale_reviews = true
-    restrict_dismissals   = false
+    dismiss_stale_reviews      = true
+    restrict_dismissals        = false
+    require_code_owner_reviews = true
   }
 
   depends_on = [
