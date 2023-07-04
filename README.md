@@ -5,13 +5,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.5.0 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | = 5.18.3 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.18.3 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | = 5.18.3 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 5.18.3 |
 
 ## Modules
 
@@ -21,23 +21,23 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_branch_protection.default_branch_protection](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/branch_protection) | resource |
-| [github_branch_protection.tf_branch_protection](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/branch_protection) | resource |
-| [github_repository.default_repositories](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository) | resource |
-| [github_repository.tf_repositories](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository) | resource |
-| [github_repository_file.default_codeowners](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_codeowners](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_data](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_docs_workflow](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_gitignore](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_local](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_main](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_outputs](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_pre_commit](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_pre_commit_workflow](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_release_workflow](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_variables](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
-| [github_repository_file.tf_versions](https://registry.terraform.io/providers/integrations/github/5.18.3/docs/resources/repository_file) | resource |
+| [github_branch_protection.default_branch_protection](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_branch_protection.tf_branch_protection](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_repository.default_repositories](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository.tf_repositories](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository_file.default_codeowners](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_codeowners](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_data](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_docs_workflow](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_gitignore](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_local](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_outputs](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_pre_commit](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_pre_commit_workflow](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_release_workflow](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_variables](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
+| [github_repository_file.tf_versions](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
 
 ## Inputs
 
