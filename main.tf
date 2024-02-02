@@ -47,6 +47,7 @@ resource "github_repository_file" "default_codeowners" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -143,6 +144,7 @@ EOF
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -161,6 +163,7 @@ resource "github_repository_file" "tf_codeowners" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -179,6 +182,7 @@ resource "github_repository_file" "tf_main" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -197,6 +201,7 @@ resource "github_repository_file" "tf_local" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -215,6 +220,7 @@ resource "github_repository_file" "tf_versions" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -233,6 +239,7 @@ resource "github_repository_file" "tf_outputs" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -251,6 +258,7 @@ resource "github_repository_file" "tf_data" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -269,6 +277,7 @@ resource "github_repository_file" "tf_variables" {
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -332,6 +341,7 @@ EOF
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -403,6 +413,7 @@ EOF
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -470,6 +481,7 @@ EOF
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
@@ -522,6 +534,7 @@ EOF
     ignore_changes = [
       commit_author,
       commit_email,
+      commit_message,
       content
     ]
   }
